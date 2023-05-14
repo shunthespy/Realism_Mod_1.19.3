@@ -45,6 +45,7 @@ public class RealismMod
         if(event.getTab() == ModCreativeModeTabs.REALISM_TAB){
             event.accept(ModItems.BLACK_PEN);
             event.accept(ModItems.RED_PEN);
+            event.accept(ModItems.HEARTFELT_NOTE);
         }
     }
 
