@@ -13,6 +13,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> BLACK_PEN = ITEMS.register("black_pen",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RED_PEN = ITEMS.register("red_pen",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

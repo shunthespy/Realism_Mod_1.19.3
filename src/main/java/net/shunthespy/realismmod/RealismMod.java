@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.shunthespy.realismmod.item.ModCreativeModeTabs;
 import net.shunthespy.realismmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -41,8 +42,9 @@ public class RealismMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS){
+        if(event.getTab() == ModCreativeModeTabs.REALISM_TAB){
             event.accept(ModItems.BLACK_PEN);
+            event.accept(ModItems.RED_PEN);
         }
     }
 
