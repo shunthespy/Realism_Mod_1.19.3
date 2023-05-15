@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " #",
+    "X "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_dye"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "realismmod:white_pen",
+    "count": 1
+  }
+}

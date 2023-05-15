@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shunthespy.realismmod.item.ModCreativeModeTabs;
 import net.shunthespy.realismmod.item.ModItems;
+import net.shunthespy.realismmod.painting.ModPaintings;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,6 +30,7 @@ public class RealismMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -45,6 +47,9 @@ public class RealismMod
         if(event.getTab() == ModCreativeModeTabs.REALISM_TAB){
             event.accept(ModItems.BLACK_PEN);
             event.accept(ModItems.RED_PEN);
+            event.accept(ModItems.BLUE_PEN);
+            event.accept(ModItems.GREEN_PEN);
+            event.accept(ModItems.WHITE_PEN);
             event.accept(ModItems.HEARTFELT_NOTE);
         }
     }
