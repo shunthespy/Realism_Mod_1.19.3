@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "realismmod:red_pen"
+    },
+    {
+      "item": "realismmod:black_pen"
+    }
+  ],
+  "result": {
+    "item": "realismmod:heartfelt_note"
+  }
+}

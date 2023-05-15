@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shunthespy.realismmod.RealismMod;
+import net.shunthespy.realismmod.item.custom.HeartfeltNoteItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -16,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> RED_PEN = ITEMS.register("red_pen",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEARTFELT_NOTE = ITEMS.register("heartfelt_note",
-            () -> new Item(new Item.Properties()));
+            () -> new HeartfeltNoteItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
