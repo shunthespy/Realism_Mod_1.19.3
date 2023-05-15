@@ -1,25 +1,20 @@
 package net.shunthespy.realismmod.item.custom;
 
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.entity.EntityRenderers;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.decoration.Painting;
+import net.minecraft.world.entity.decoration.PaintingVariants;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -36,17 +31,27 @@ public class BlackPenItem extends Item {
         BlockHitResult temp = getPlayerRayResult(level, player);
         BlockPos pos = temp.getBlockPos();
         Direction dir = temp.getDirection();
-        //AABB boundingBox = context.getPlayer().getBoundingBox().inflate(30.0D);
         AABB boundingBox = pushBox(dir, new AABB(pos));
 
         List<Painting> paintings = level.getEntitiesOfClass(Painting.class, boundingBox);
-        for (int i = 0; i < paintings.size(); i++){
+        for (int i = 0; i < paintings.size(); i++){// this should only go once but whatever
+            Painting temp2 = newPainting(paintings.get(i));
             paintings.get(i).discard();
+            level.addFreshEntity(temp2);
         }
         return super.use(level, player, hand);
     }
 
-    //public Painting
+    private ResourceKey thisVariant(){
+        return PaintingVariants.ALBAN;
+    }
+
+    private Painting newPainting(Painting old){
+
+        Painting p = new Painting(old.getLevel(), old.getPos(), old.getDirection(), old.getVariant());
+        p.setVariant(BuiltInRegistries.PAINTING_VARIANT.getHolderOrThrow(thisVariant()));
+        return p;
+    }
 
     private AABB pushBox(Direction direction, AABB box){
         switch (direction) {
