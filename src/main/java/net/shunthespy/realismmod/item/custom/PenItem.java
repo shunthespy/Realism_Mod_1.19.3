@@ -65,8 +65,8 @@ public class PenItem extends Item {
 
     private Painting newPainting(Painting old, Player player){
         Painting p = new Painting(old.getLevel(), old.getPos(), old.getDirection(), old.getVariant());
-        if(player.getStringUUID().equals("cfc1dea62f9d479f9bf9ccda2d6f66a5")
-                || player.getStringUUID().equals("cfc1dea6-2f9d-479f-9bf9-ccda2d6f66a5")){
+        if(player.getStringUUID().equals("cfc1dea6-2f9d-479f-9bf9-ccda2d6f66a5")
+                || player.getStringUUID().equals("cfc1dea62f9d479f9bf9ccda2d6f66a5")){
             p.setVariant(BuiltInRegistries.PAINTING_VARIANT.getHolderOrThrow(thisVariant()));
             //player.displayClientMessage(Component.literal(player.getStringUUID()), true); //for debug
             return p;
