@@ -22,6 +22,8 @@ public class ModItems {
             () -> new GreenPenItem(new Item.Properties()));
     public static final RegistryObject<Item> WHITE_PEN = ITEMS.register("white_pen",
             () -> new WhitePenItem(new Item.Properties()));
+    public static final RegistryObject<Item> DEBUG_PEN = ITEMS.register("debug_pen",
+            () -> new DebugPenItem(new Item.Properties()));
     public static final RegistryObject<Item> HEARTFELT_NOTE = ITEMS.register("heartfelt_note",
             () -> new HeartfeltNoteItem(new Item.Properties()));
     public static final RegistryObject<Item> CLAY_LAYER = ITEMS.register("clay_layer",
@@ -38,6 +40,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BURGER = ITEMS.register("burger",
+            () -> new Item(new Item.Properties().food(ModFoods.BURGER)));
+    public static final RegistryObject<Item> COOKED_BURGER = ITEMS.register("cooked_burger",
+            () -> new Item(new Item.Properties().food(ModFoods.COOKED_BURGER)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

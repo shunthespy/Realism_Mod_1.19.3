@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "realismmod:bun"
+    },
+    {
+      "item": "realismmod:patty"
+    },
+    {
+      "item": "realismmod:cheese"
+    },
+    {
+      "item": "realismmod:tomato"
+    },
+    {
+      "item": "realismmod:tomato"
+    },
+    {
+      "item": "realismmod:onion"
+    }
+  ],
+  "result": {
+    "item": "realismmod:burger"
+  }
+}

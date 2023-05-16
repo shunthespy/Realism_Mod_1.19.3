@@ -50,6 +50,7 @@ public class RealismMod
             event.accept(ModItems.BLUE_PEN);
             event.accept(ModItems.GREEN_PEN);
             event.accept(ModItems.WHITE_PEN);
+            event.accept(ModItems.DEBUG_PEN);
             event.accept(ModItems.HEARTFELT_NOTE);
             event.accept(ModItems.CLAY_LAYER);
             event.accept(ModItems.BUN_HALF);
@@ -58,6 +59,8 @@ public class RealismMod
             event.accept(ModItems.PATTY);
             event.accept(ModItems.CHEESE);
             event.accept(ModItems.ONION);
+            event.accept(ModItems.BURGER);
+            event.accept(ModItems.COOKED_BURGER);
         }
     }
 

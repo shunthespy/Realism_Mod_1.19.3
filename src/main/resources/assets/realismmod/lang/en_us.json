@@ -4,6 +4,7 @@
   "item.realismmod.blue_pen": "Blue Pen",
   "item.realismmod.green_pen": "Green Pen",
   "item.realismmod.white_pen": "White Pen",
+  "item.realismmod.debug_pen": "Debug Pen",
   "item.realismmod.heartfelt_note": "Heartfelt Note",
   "item.realismmod.clay_layer": "Clay Layer",
   "item.realismmod.bun_half": "Bun Half",
@@ -12,6 +13,8 @@
   "item.realismmod.patty": "Patty",
   "item.realismmod.cheese": "Cheese",
   "item.realismmod.onion": "Onion",
+  "item.realismmod.burger": "Burger",
+  "item.realismmod.cooked_burger": "Cooked Burger",
 
   "creativemodetab.realism_tab": "Realism Mod"
 }
