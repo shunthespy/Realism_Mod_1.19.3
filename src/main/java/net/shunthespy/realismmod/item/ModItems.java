@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, RealismMod.MOD_ID);
 
     public static final RegistryObject<Item> BLACK_PEN = ITEMS.register("black_pen",
-            () -> new BlackPenItem(new Item.Properties()));
+            () -> new BlackPenItem(new Item.Properties()));//thinking there was probably a better way to do this but idc
     public static final RegistryObject<Item> RED_PEN = ITEMS.register("red_pen",
             () -> new RedPenItem(new Item.Properties()));
     public static final RegistryObject<Item> BLUE_PEN = ITEMS.register("blue_pen",
@@ -24,6 +24,20 @@ public class ModItems {
             () -> new WhitePenItem(new Item.Properties()));
     public static final RegistryObject<Item> HEARTFELT_NOTE = ITEMS.register("heartfelt_note",
             () -> new HeartfeltNoteItem(new Item.Properties()));
+    public static final RegistryObject<Item> CLAY_LAYER = ITEMS.register("clay_layer",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUN_HALF = ITEMS.register("bun_half",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUN = ITEMS.register("bun",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PATTY = ITEMS.register("patty",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ONION = ITEMS.register("onion",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

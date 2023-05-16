@@ -4,7 +4,6 @@ package net.shunthespy.realismmod.item.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -31,6 +30,7 @@ public class PenItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        player.swing(hand);
         BlockHitResult temp = getPlayerRayResult(level, player);
         BlockPos pos = temp.getBlockPos();
         Direction dir = temp.getDirection();

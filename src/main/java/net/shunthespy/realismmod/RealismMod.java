@@ -51,6 +51,13 @@ public class RealismMod
             event.accept(ModItems.GREEN_PEN);
             event.accept(ModItems.WHITE_PEN);
             event.accept(ModItems.HEARTFELT_NOTE);
+            event.accept(ModItems.CLAY_LAYER);
+            event.accept(ModItems.BUN_HALF);
+            event.accept(ModItems.BUN);
+            event.accept(ModItems.TOMATO);
+            event.accept(ModItems.PATTY);
+            event.accept(ModItems.CHEESE);
+            event.accept(ModItems.ONION);
         }
     }
 
